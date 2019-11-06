@@ -208,18 +208,17 @@
     color: white;
 
     background-color: black;
-    height: 70vh;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 10% 20% 10% 20%;
   }
   #outline .text{
     font-family: 'Noto Sans KR', sans-serif;
 
-    width: 100vw;
+    width: 40vw;
     height: auto;
   }
   #outline .image img{

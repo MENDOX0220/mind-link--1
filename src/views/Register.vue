@@ -24,15 +24,15 @@
     export default {
         data(){
             return{
-                username: "",
-                nickname: "",
-                password: "",
-                password_check: "",
+                username: null,
+                nickname: null,
+                password: null,
+                password_check: null,
 
-                err_username: "",
-                err_nickname: "",
-                err_password: "",
-                err_password_check: ""
+                err_username: null,
+                err_nickname: null,
+                err_password: null,
+                err_password_check: null
             }
         },
         methods:{
@@ -58,7 +58,14 @@
                 //정상일 때
                 if(!this.err_username && !this.err_nickname && !this.err_password && !this.err_password_check){
                     this.$store.state.logon = true;
-                    router.push("/");
+
+                    let userobj = {
+                        username: this.username,
+                        nickname: this.nickname,
+                        password: this.password
+                    }
+
+                    router.push("/login");
                 }
             }
         }
